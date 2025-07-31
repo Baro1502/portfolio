@@ -9,7 +9,7 @@ export function Contact() {
   const contactInfo = {
     name: 'Trần Nguyễn Duy Bảo',
     email: 'trannguyenduybao152@gmail.com',
-    handle: '@bao.tran',
+    phone: '+84829782878',
     socials: [
       {
         name: 'LinkedIn',
@@ -26,7 +26,7 @@ export function Contact() {
     ],
   };
 
-  // Function to handle email click
+  // Function to phone email click
   const openEmail = () => {
     window.open(`mailto:${contactInfo.email}`, '_blank', 'noopener,noreferrer');
   };
@@ -45,7 +45,7 @@ export function Contact() {
             Contact
           </h2>
           <span className="mt-2 sm:mt-0 text-muted-foreground">
-            {contactInfo.handle}
+            {contactInfo.phone}
           </span>
         </div>
 
