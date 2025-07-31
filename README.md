@@ -24,8 +24,7 @@ Want to run this project locally? Here's what you need:
 
 - **Node.js** (v18 or higher)
 - **pnpm** package manager
-- **OpenAI API token** (for AI chat functionality)
-- **GitHub token** (for GitHub integration features)
+- **Google Generative API token** (for AI chat functionality)\
 
 ### Setup
 
@@ -44,8 +43,7 @@ Want to run this project locally? Here's what you need:
    Create a `.env` file in the root directory:
 
    ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   GITHUB_TOKEN=your_github_token_here
+   GOOGLE_GENERATIVE_AI_API_KEY=your_openai_api_key_here
    ```
 4. **Run the development server**
 
