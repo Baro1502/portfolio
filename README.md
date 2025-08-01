@@ -52,13 +52,15 @@ Want to run this project locally? Here's what you need:
    ```
 5. **Open your browser**
    Navigate to `http://localhost:3000`
-
 6. **Build the production**
 
    ```bash
    pnpm build
    pnpm start
+
+   pm2 start "PORT=5000 npx serve@latest out" --name "duybao.portfolio.showtech.cloud" -- start
    ```
+
 ### Getting your **tokens**
 
 - **GOOGLE_GENERATIVE_AI_API_KEYn**: Generate one
