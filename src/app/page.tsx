@@ -129,15 +129,15 @@ export default function Home() {
       </div>
 
       {/* GitHub button */}
-      <div className="absolute top-6 right-8 z-20">
+      {/* <div className="absolute top-6 right-8 z-20">
         <GithubButton
           //targetStars={68}
           animationDuration={1.5}
-          label="Star"
+          label="me"
           size={'sm'}
           repoUrl="https://github.com/Baro1502"
         />
-      </div>
+      </div> */}
 
       {/* OPEN FOR WORK */}
       <StatusButton isOpen={true} />
