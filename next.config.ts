@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // enables static export
   images: {
-    remotePatterns: ['images.unsplash.com', 'assets.aceternity.com'],
+    domains: ['images.unsplash.com', 'assets.aceternity.com'],
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // skip lint errors during build
   },
 };
 
