@@ -58,7 +58,7 @@ Want to run this project locally? Here's what you need:
    pnpm build
    pnpm start
 
-   pm2 start "PORT=5000 npx serve@latest out" --name "duybao.portfolio.showtech.cloud" -- start
+   pm2 start "PORT=5000 pnpm start" --name "duybao.portfolio"
    ```
 
 ### Getting your **tokens**
