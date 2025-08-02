@@ -8,8 +8,14 @@ import { url } from 'inspector';
 const PROJECT_CONTENT = [
   {
     title: 'Doctor Assistant',
-    description:
-      `An AI-powered healthcare assistant designed for intelligent, multimodal interactions using state-of-the-art LLMs and vector search.\n\n- Built with LangChain Agent for dynamic, multi-turn conversations\n- Integrated Pinecone for semantic search over medical documents\n- Enabled PDF/image (e.g., skin scraches) analysis via OCR and embedding\n- Combined OpenAI/GCP/Azure APIs to provide contextual answers\n- Used RAG to provide document-grounded medical assistance`,
+    description: `An AI-powered healthcare assistant designed for real-time, intelligent interaction via natural language and multimodal inputs.<br>
+- Built a <strong>LangChain Agent</strong> to manage multi-turn conversations, memory, and tool invocation for dynamic user queries  
+- Integrated <strong>Pinecone</strong> for fast, semantic retrieval across medical PDFs, documents, and patient records  
+- Enabled <strong>multimodal analysis</strong> of uploaded content: images (e.g., skin conditions), PDFs, and plain text  
+- Used <strong>Retrieval-Augmented Generation (RAG)</strong> to ground LLM responses in document context  
+- Provides contextual medical insights, document summarization, and symptom interpretation using <strong>OpenAI</strong>, <strong>GCP</strong>, and <strong>Azure</strong> APIs`,
+
+
     techStack: [
       'Python', 'LLM', 'OpenAI', 'Azure', 'GCP', 'OCR', 'RAG', 'Vector DB',
       'Pinecone', 'Langchain', 'vLLM', 'Ollama', 'PyPDF'
@@ -28,8 +34,14 @@ const PROJECT_CONTENT = [
   },
   {
     title: 'Spaceone',
-    description:
-      `A multimodal big data platform that summarizes video content and analyzes social sentiment using LLMs and Kafka.\n\n- Extracted audio from video via Spleeter, transcribed to text\n- Summarized using OpenAI LLM with structured prompts\n- Fine-tuned PhoBERT for Vietnamese sentiment classification\n- Scaled processing with Kafka, deployed on GCP and AWS`,
+    description: `A multimodal big data pipeline for video content summarization and social sentiment analysis at scale.<br>
+- Built an end-to-end <strong>video summarization pipeline</strong>: extracted clean vocals using <strong>Spleeter</strong>, converted speech to text, and summarized using <strong>OpenAI LLMs</strong> with structured prompts  
+- Fine-tuned <strong>PhoBERT</strong> for sentiment classification on Vietnamese social media posts, improving context sensitivity  
+- Combined <strong>audio preprocessing</strong>, <strong>ASR</strong>, and <strong>LLM-driven summarization</strong> into a unified pipeline  
+- Integrated <strong>Kafka</strong> for scalable stream processing of real-time content  
+- Deployed on <strong>GCP</strong> and <strong>AWS</strong> in a hybrid cloud architecture  
+- Outputs structured summaries for downstream analytics and search`,
+
     techStack: ['Python', 'Kafka', 'OpenAI', 'GCP', 'AWS', 'NodeJs', 'Transformer'],
     date: '2024',
     links: [
@@ -42,21 +54,39 @@ const PROJECT_CONTENT = [
   },
   {
     title: 'Diabetes Prediction',
-    description:
-      `A regression-based ML pipeline to predict blood sugar levels from health questionnaire responses and basic diagnostics.\n\n- Cleaned/normalized tabular data (198+ mismatches, missing G2)\n- Applied log transformation on skewed target distribution\n- Balanced dataset using ADASYN oversampling\n- Trained multiple regressors; SVR yielded best R² (≈0.8)\n- Pipeline supports early-stage, non-invasive diabetes screening`,
+    description: `A regression-based ML pipeline for predicting blood sugar levels using questionnaire responses and basic diagnostics, aiming to support early-stage, non-invasive diabetes screening.<br>
+- Cleaned tabular data with 198+ mismatches and 294 missing glucose entries; encoded categorical and binary features
+- Applied <b><i>y′ = ln(1 + y)</i></b> log transformation on the left-skewed target and reversed with <b><i>y = eʸ′ − 1</i></b>
+- Balanced the dataset using ADASYN to correct for bias toward non-diabetic samples
+- Trained and tuned multiple regressors (SVR, MLP, RF, GBDT...) using <b>RandomizedSearchCV</b>
+- SVR achieved best performance with <b>~0.6–0.7 mmol/L error</b> and highest R² on test sets
+- Pipeline built with explainable, healthcare-compatible tabular ML and EDA-guided preprocessing`,
     techStack: ['Python', 'Pandas', 'XGBoost', 'Scikit-learn'],
     date: '2024',
     links: [],
     images: [
       { src: '/projects/diabetes/data-skewness.png', alt: 'Data skewness' },
+      { src: '/projects/diabetes/data-after-norm.png', alt: 'Data after normalized using log transformation' },
       { src: '/projects/diabetes/model-comparision.png', alt: 'Model comparison' },
       { src: '/projects/diabetes/result.png', alt: 'Prediction results' },
     ],
   },
   {
     title: 'Stock Price Forecasting',
-    description:
-      `Time series forecasting project using LSTM to predict stock closing prices based on historic market behavior.\n\n- Conducted EDA (moving averages, volatility, returns, correlation)\n- Normalized features, built sliding windows over 50-day inputs\n- Trained a 2-layer LSTM with dense output for regression\n- Achieved R² ≈ 0.799 and RMSE ≈ 12.7 on validation set\n- Visualized predictions vs. actual values using Plotly`,
+    description: `This project applied exploratory data analysis (EDA) and a <strong>Long Short-Term Memory (LSTM)</strong> model to forecast stock closing prices using historical trends and volume indicators.<br>
+<strong>Data Preprocessing:</strong>  
+Parsed and cleaned NSE (Tata) stock data.  
+Applied <strong>MinMax scaling</strong> on features with a dedicated scaler for Close price.<br>
+<strong>EDA Insights:</strong>  
+- Visualized price trends and <strong>moving averages</strong>  
+- Analyzed <strong>daily returns</strong> and volatility  
+- Built a <strong>correlation matrix</strong> and candlestick charts for patterns<br>
+<strong>LSTM Forecasting:</strong>  
+- Used sliding windows of 50 days as input  
+- Built a <strong>2-layer LSTM</strong> model with MSE loss  
+- <strong>Inverse transformed</strong> predictions for real price scale<br>`,
+
+
     techStack: ['Python', 'Pandas', 'Seaborn', 'LSTM', 'Keras', 'Plotly'],
     date: '2023',
     links: [
@@ -71,8 +101,14 @@ const PROJECT_CONTENT = [
   },
   {
     title: 'Spooface',
-    description:
-      `A Face ID system resistant to presentation attacks via image-based spoof detection using custom-trained YOLOv8.\n\n- Labeled a spoofing dataset to fine-tune YOLOv8 model\n- Integrated OpenCV, DeepFace, and face_recognition for identity matching\n- Real-time spoof detection pipeline filters out printed/onscreen images\n- Modular design for kiosk or edge deployment`,
+    description: `A spoofing-aware Face ID system capable of verifying real human presence and detecting presentation attacks such as <strong>photos, screens, and deepfakes</strong> during facial authentication.<br>
+- Finetuned <strong>YOLOv8</strong> on a curated spoofing dataset to distinguish between real and spoofed faces  
+- Designed a <strong>multi-step spoof detection pipeline</strong> combining OpenCV preprocessing, live face capture, liveness verification, and classification  
+- Integrated <strong>DeepFace</strong> and <strong>face_recognition</strong> libraries to verify identity after passing spoof detection  
+- Enables <strong>real-time liveness detection</strong> against common spoofing attacks  
+- Lightweight and <strong>deployment-ready codebase</strong> for edge devices or kiosk-based authentication  
+- Modular architecture allowing plug-and-play with other <strong>biometric or login systems</strong>`,
+
     techStack: ['Python', 'YOLOv8', 'OpenCV', 'DeepFace', 'face_recognition', 'Pandas'],
     date: '2024',
     links: [],
@@ -83,14 +119,29 @@ const PROJECT_CONTENT = [
   },
   {
     title: 'Traffix',
-    description:
-      `A smart traffic navigation system built with public camera feeds and computer vision, replacing GPS data with real-time congestion analysis.\n\n- Collected public camera images and fine-tuned YOLOv8 to count vehicle types\n- Used A* algorithm over camera graph weighted by vehicle density\n- Built cross-platform app with React Native frontend, Python backend\n- Integrated Google Maps for geolocation + live route display`,
+    description: `We developed <strong>Traffix</strong>, a real-time traffic navigation system that replaces GPS-based routing with <strong>AI-powered visual traffic analysis</strong> using public surveillance cameras in Vietnam.<br>
+<strong>Live Camera Integration:</strong> Collected real-time snapshots from city-wide traffic camera APIs.
+<strong>YOLOv8-based Detection:</strong> Fine-tuned a custom <strong>YOLOv8</strong> model to detect and count vehicles (motorbike, car, bus) in images.<br>
+<strong>Smart Routing:</strong> Modeled each camera as a graph node, with an <strong>A* pathfinding algorithm</strong> using a congestion heuristic weighted by vehicle type (e.g., bus > car > motorbike).
+<strong>Mobile App Interface:</strong> Built with <strong>React Native</strong> to display optimal routes and live traffic images.<br>
+<strong>Backend Infrastructure:</strong> Python-based API integrating object detection, graph routing, and Google Maps API for camera geolocation and route visualization.<br>
+<strong>Key Highlights:</strong>
+- <strong>Real-time visual traffic analysis</strong> from public camera feeds
+- AI-driven congestion estimation using object detection
+- Dynamic route suggestions based on live traffic, not outdated GPS data
+- Focused deployment within a single district for efficient real-world testing`,
+
+
     techStack: ['Python', 'YOLOv8', 'OpenCV', 'React Native', 'Google Maps API'],
     date: '2024 - 2025',
     links: [],
     images: [
       { src: '/projects/traffix/detection-batch1.jpg', alt: 'Vehicle detection' },
       { src: '/projects/traffix/default-inapp.jpg', alt: 'App screenshot' },
+      { src: '/projects/traffix/PC-curve.png', alt: 'Precision-Confidence curve' },
+      { src: '/projects/traffix/RC-curve.png', alt: 'Recall-Confidence curve' },
+      { src: '/projects/traffix/PR-curve.jpeg', alt: 'Precision-Recall curve' },
+      { src: '/projects/traffix/confusion-matrix.png', alt: 'Confusion matrix' },
     ],
   },
 ];
@@ -123,9 +174,10 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
             <span>{projectData.date}</span>
           </div>
 
-          <p className="text-secondary-foreground font-sans text-base leading-relaxed md:text-lg text-justify whitespace-pre-line">
-            {projectData.description}
-          </p>
+          <p className="text-secondary-foreground font-sans text-base leading-relaxed md:text-lg text-justify whitespace-pre-line"
+            dangerouslySetInnerHTML={{ __html: projectData.description || '' } as { __html: string }}
+          />
+
 
 
           {/* Tech stack */}
