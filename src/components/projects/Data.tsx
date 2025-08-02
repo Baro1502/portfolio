@@ -9,7 +9,7 @@ const PROJECT_CONTENT = [
   {
     title: 'Doctor Assistant',
     description:
-      `An AI-powered healthcare assistant designed for intelligent, multimodal interactions using state-of-the-art LLMs and vector search.\n\n- Built with LangChain Agent for dynamic, multi-turn conversations\n- Integrated Pinecone for semantic search over medical documents\n- Enabled PDF/image (e.g., X-rays) analysis via OCR and embedding\n- Combined OpenAI/GCP/Azure APIs to provide contextual answers\n- Used RAG to provide document-grounded medical assistance`,
+      `An AI-powered healthcare assistant designed for intelligent, multimodal interactions using state-of-the-art LLMs and vector search.\n\n- Built with LangChain Agent for dynamic, multi-turn conversations\n- Integrated Pinecone for semantic search over medical documents\n- Enabled PDF/image (e.g., skin scraches) analysis via OCR and embedding\n- Combined OpenAI/GCP/Azure APIs to provide contextual answers\n- Used RAG to provide document-grounded medical assistance`,
     techStack: [
       'Python', 'LLM', 'OpenAI', 'Azure', 'GCP', 'OCR', 'RAG', 'Vector DB',
       'Pinecone', 'Langchain', 'vLLM', 'Ollama', 'PyPDF'
@@ -123,9 +123,10 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
             <span>{projectData.date}</span>
           </div>
 
-          <p className="text-secondary-foreground font-sans text-base leading-relaxed md:text-lg">
+          <p className="text-secondary-foreground font-sans text-base leading-relaxed md:text-lg text-justify whitespace-pre-line">
             {projectData.description}
           </p>
+
 
           {/* Tech stack */}
           <div className="pt-4">
@@ -220,7 +221,7 @@ export const data = [
     content: <ProjectContent project={{ title: 'Spaceone' }} />,
   },
   {
-    category: 'Big Data & Multimodal',
+    category: 'Computer Vision',
     title: 'Spooface',
     src: '/projects/spooface/logo.webp',
     content: <ProjectContent project={{ title: 'Spooface' }} />,

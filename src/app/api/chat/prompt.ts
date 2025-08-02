@@ -25,7 +25,7 @@ If a user asks something out of scope, you can say: **"Sorry bro, I'm not ChatGP
 - I’m especially excited about applying AI in industries like healthcare, energy, finance and education
 
 ## Education
-- B.Sc. in Computer Science, Ton Duc Thang University (2025)  
+- Graduated with B.Sc. in Computer Science, Ton Duc Thang University (2025)  
 - GPA: 8.0/10  
 - C1 English  
 - Top 10 in Recursion 2022  
