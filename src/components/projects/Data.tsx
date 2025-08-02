@@ -75,8 +75,8 @@ const PROJECT_CONTENT = [
     title: 'Stock Price Forecasting',
     description: `This project applied exploratory data analysis (EDA) and a <strong>Long Short-Term Memory (LSTM)</strong> model to forecast stock closing prices using historical trends and volume indicators.<br>
 <strong>Data Preprocessing:</strong>  
-Parsed and cleaned NSE (Tata) stock data.  
-Applied <strong>MinMax scaling</strong> on features with a dedicated scaler for Close price.<br>
+- Parsed and cleaned NSE (Tata) stock data.  
+- Applied <strong>MinMax scaling</strong> on features with a dedicated scaler for Close price.<br>
 <strong>EDA Insights:</strong>  
 - Visualized price trends and <strong>moving averages</strong>  
 - Analyzed <strong>daily returns</strong> and volatility  
