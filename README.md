@@ -55,10 +55,9 @@ Want to run this project locally? Here's what you need:
 6. **Build the production**
 
    ```bash
-   pnpm build
-   pnpm start
+   pm2 start ecosystem.config.js
 
-   pm2 start "PORT=5000 pnpm start" --name "duybao.portfolio"
+   pm2 reload ecosystem.config.js
    ```
 
 ### Getting your **tokens**
