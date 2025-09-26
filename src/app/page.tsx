@@ -140,7 +140,7 @@ export default function Home() {
       </div> */}
 
       {/* OPEN FOR WORK */}
-      <StatusButton isOpen={true} />
+      <StatusButton isOpen={false} />
 
       {/* header */}
       <motion.div
